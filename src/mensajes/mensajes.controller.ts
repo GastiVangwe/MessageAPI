@@ -1,26 +1,26 @@
 import { Body, Controller, Delete, Get, Post, Put } from '@nestjs/common';
-import { CreateMensajeDto } from './dto/create-mensaje-dto';
+import { CreateMessageDto } from './dto/create-mensaje-dto';
 
 @Controller('mensajes')
-export class MensajesController {
+export class MessagesController {
     @Post()
-    create (@Body()  createMensajeDto: CreateMensajeDto) {
-        return 'mensaje creado';
+    create (@Body()  createMessageDto: CreateMessageDto) {
+        return 'message created';
     }
 
     @Get()
     getAll() {
-        return 'lista de mensajes';
+        return 'list of messages';
     }
 
     @Put(':id')
-    update(@Body() updateMensajeDto: CreateMensajeDto) {
-        return 'mensaje actualizado';
+    update(@Body() updateMessageDto: CreateMessageDto) {
+        return 'message updated';
     }
 
     @Delete(':id') 
     delete() {
-        return 'mensaje eliminado';
+        return 'mensaje deleted';
     }
 
 }
