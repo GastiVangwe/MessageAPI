@@ -1,7 +1,7 @@
-import { Mensaje } from './mensaje.entity';
+import { Message } from './mensaje.entity';
 
-describe('Mensaje', () => {
+describe('Message', () => {
   it('should be defined', () => {
-    expect(new Mensaje()).toBeDefined();
+    expect(new Message()).toBeDefined();
   });
 });
