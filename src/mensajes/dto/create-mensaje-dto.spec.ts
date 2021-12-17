@@ -1,7 +1,7 @@
-import { CreateMensajeDto } from './create-mensaje-dto';
+import { CreateMessageDto } from './create-mensaje-dto';
 
 describe('CreateMensajeDto', () => {
   it('should be defined', () => {
-    expect(new CreateMensajeDto()).toBeDefined();
+    expect(new CreateMessageDto()).toBeDefined();
   });
 });
