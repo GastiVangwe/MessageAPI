@@ -1,6 +1,6 @@
 import { Body, Controller, Delete, Get, HttpStatus, Param, Post, Put, Res } from '@nestjs/common';
-import { CreateMessageDto } from './dto/create-mensaje-dto';
-import { MessagesService } from './mensajes.service';
+import { CreateMessageDto } from './dto/create-message-dto';
+import { MessagesService } from './messages.service';
 
 @Controller('messages')
 export class MessagesController {

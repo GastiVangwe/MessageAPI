@@ -1,4 +1,4 @@
-import { CreateMessageDto } from './create-mensaje-dto';
+import { CreateMessageDto } from './create-message-dto';
 
 describe('CreateMessageDto', () => {
   it('should be defined', () => {

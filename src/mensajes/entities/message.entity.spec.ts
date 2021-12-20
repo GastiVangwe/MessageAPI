@@ -1,4 +1,4 @@
-import { Message } from './mensaje.entity';
+import { Message } from './message.entity';
 
 describe('Message', () => {
   it('should be defined', () => {
