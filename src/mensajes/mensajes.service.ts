@@ -12,19 +12,19 @@ export class MessagesService {
         private readonly messageRepository: Repository<Message>,
     ) {}
 
-    async getAll() {
+    async getAll(): Promise<Message[]> {
         return await this.messageRepository.find();
     }
 
-    async createMessage(newMessage: CreateMessageDto) {
+    async createMessage(newMessage: CreateMessageDto): Promise<Message> {
         const currentNewMessage = new Message();
         currentNewMessage.message = newMessage.message;
         currentNewMessage.nick = newMessage.nick;
 
-        this.messageRepository.save(currentNewMessage);
+        return this.messageRepository.save(currentNewMessage);
     }
 
-    async updateMessage(messageId: number, updateMessage: CreateMessageDto) {
+    async updateMessage(messageId: number, updateMessage: CreateMessageDto): Promise<Message> {
         const currentMessageUpdate = await this.messageRepository.findOne(messageId);
         currentMessageUpdate.message = updateMessage.message;
         currentMessageUpdate.nick = updateMessage.nick;
@@ -32,7 +32,7 @@ export class MessagesService {
         return this.messageRepository.save(currentMessageUpdate);
     }
 
-    async deleteMessage(messageId: number) {
+    async deleteMessage(messageId: number): Promise<any> {
         return await this.messageRepository.delete(messageId);
     }
 }
