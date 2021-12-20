@@ -2,9 +2,9 @@ import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { Message } from './mensajes/entities/mensaje.entity';
-import { MessagesController } from './mensajes/mensajes.controller';
-import { MessagesService } from './mensajes/mensajes.service';
+import { Message } from './messages/entities/message.entity';
+import { MessagesController } from './messages/messages.controller';
+import { MessagesService } from './messages/messages.service';
 
 @Module({
   imports: [
